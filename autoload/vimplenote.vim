@@ -1,7 +1,7 @@
 "=============================================================================
 " vimplenote.vim
 " Author: Yasuhiro Matsumoto <mattn.jp@gmail.com>
-" Last Change: 10-May-2013.
+" Last Change: 07-Jun-2013.
 
 let s:save_cpo = &cpo
 set cpo&vim
@@ -55,7 +55,7 @@ endfunction
 function! s:interface.open_scratch_buffer(name)
   let bn = bufnr(a:name)
   if bn == -1
-    silent noautocmd exe "new " . a:name
+    silent noautocmd exe "tabnew " . a:name
   else
     let bw = bufwinnr(bn)
     if bw != -1
